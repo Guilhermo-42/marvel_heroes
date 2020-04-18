@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Marvel Heroes</string>
+
+    <!-- Heroes List Activity -->
+    <string name="heroes_list_activity_search_hint">Search for a hero</string>
+
 </resources>
