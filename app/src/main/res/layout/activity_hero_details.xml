@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:background="@color/white"
+        tools:context=".flow.heroes.details.HeroDetailsActivity">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/heroDetailsToolbar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="@color/purple"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:title="@string/hero_list_title"
+            app:titleTextColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/heroDetailsPosterImage"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heroDetailsToolbar"
+            tools:layout_height="400dp" />
+
+        <TextView
+            android:id="@+id/heroDetailsTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginEnd="24dp"
+            android:ellipsize="end"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/heroDetailsText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:text="Hulk" />
+
+        <TextView
+            android:id="@+id/heroDetailsText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="16dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/heroDetailsPosterImage"
+            app:layout_constraintEnd_toEndOf="@+id/heroDetailsTitle"
+            app:layout_constraintStart_toStartOf="@+id/heroDetailsTitle"
+            tools:text="Some big description here | SOME BG description HERE lorem ipsiu BG description HERE lorem ipsiu Some big description here | SOME BG description HERE lorem ipsiu" />
+
+        <TextView
+            android:id="@+id/heroComicsTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="@string/hero_details_comics_title"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/heroDetailsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/heroDetailsPosterImage" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/heroComicsList"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintEnd_toEndOf="@id/heroDetailsTitle"
+            app:layout_constraintStart_toStartOf="@id/heroDetailsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/heroComicsTitle"
+            tools:listitem="@layout/hero_comic_list_item" />
+
+        <ProgressBar
+            android:id="@+id/heroComicsProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="@id/heroDetailsTitle"
+            app:layout_constraintStart_toStartOf="@id/heroDetailsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/heroComicsTitle" />
+
+        <TextView
+            android:id="@+id/heroComicsEmptyState"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="@string/hero_details_comics_empty_state"
+            android:textSize="20sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@id/heroDetailsTitle"
+            app:layout_constraintStart_toStartOf="@id/heroDetailsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/heroComicsTitle" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

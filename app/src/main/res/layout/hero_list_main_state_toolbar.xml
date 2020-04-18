@@ -6,19 +6,20 @@
     android:layout_height="wrap_content"
     tools:showIn="@layout/activity_heroes_list">
 
-    <ImageView
-        android:id="@+id/heroesListMainStateLogo"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:scaleType="fitStart"
-        android:src="@drawable/logo"
+    <TextView
+        android:id="@+id/heroListMainStateTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/hero_list_title"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/heroesListMainStateSearchButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageButton
-        android:id="@+id/heroesListMainStateSearchButton"
+        android:id="@+id/heroListMainStateSearchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"

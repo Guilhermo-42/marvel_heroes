@@ -18,12 +18,30 @@ android {
     }
 
     buildTypes {
+        debug {
+            buildConfigField "String", "BASE_URL", '"https://gateway.marvel.com/v1/public/"'
+            buildConfigField "String", "API_KEY", '"024ed12caaddbfd7ab0ec0a50712498f"'
+            buildConfigField "String", "HASH", '"d15d0c39d01fa018484ba74ee5a55833"'
+            buildConfigField "String", "TS", '"1"'
+        }
         release {
+            buildConfigField "String", "BASE_URL", '"https://gateway.marvel.com/v1/public/"'
+            buildConfigField "String", "API_KEY", '"024ed12caaddbfd7ab0ec0a50712498f"'
+            buildConfigField "String", "HASH", '"d15d0c39d01fa018484ba74ee5a55833"'
+            buildConfigField "String", "TS", '"1"'
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
 
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
 }
 
 dependencies {
@@ -57,6 +75,9 @@ dependencies {
 
     //Material
     implementation 'com.google.android.material:material:1.1.0'
+
+    //Circular Progress Drawable
+    implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.0.0"
 
     //Glide
     implementation 'com.github.bumptech.glide:glide:4.10.0'

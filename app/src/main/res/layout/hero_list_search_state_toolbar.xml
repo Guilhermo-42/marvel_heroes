@@ -7,7 +7,7 @@
     tools:showIn="@layout/activity_heroes_list">
 
     <ImageButton
-        android:id="@+id/heroesListSearchExitButton"
+        android:id="@+id/heroListSearchExitButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="?attr/selectableItemBackgroundBorderless"
@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/heroesListSearchTextInputLayout"
+        android:id="@+id/heroListSearchTextInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -25,24 +25,23 @@
         android:layout_marginEnd="8dp"
         android:theme="@style/DefaultButtonTheme"
         app:boxStrokeColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="@+id/heroesListSearchExitButton"
-        app:layout_constraintEnd_toStartOf="@+id/heroesListSearchStateSearchButton"
-        app:layout_constraintStart_toEndOf="@+id/heroesListSearchExitButton"
-        app:layout_constraintTop_toTopOf="@+id/heroesListSearchExitButton">
+        app:layout_constraintBottom_toBottomOf="@+id/heroListSearchExitButton"
+        app:layout_constraintEnd_toStartOf="@+id/heroListSearchStateSearchButton"
+        app:layout_constraintStart_toEndOf="@+id/heroListSearchExitButton"
+        app:layout_constraintTop_toTopOf="@+id/heroListSearchExitButton">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/heroesListSearchTextInputEditText"
+            android:id="@+id/heroListSearchTextInputEditText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:hint="@string/heroes_list_activity_search_hint"
-            android:inputType="text"
-            android:textColorHint="@color/white" />
+            android:hint="@string/hero_list_search_hint"
+            android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <ImageButton
-        android:id="@+id/heroesListSearchStateSearchButton"
+        android:id="@+id/heroListSearchStateSearchButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"

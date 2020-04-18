@@ -1,7 +1,17 @@
 <resources>
-    <string name="app_name">Marvel Heroes</string>
+    <string name="app_name">MovieX</string>
 
-    <!-- Heroes List Activity -->
-    <string name="heroes_list_activity_search_hint">Search for a hero</string>
+    <!-- Hero List Activity -->
+    <string name="hero_list_title">Heroes</string>
+    <string name="hero_list_search_title">Search</string>
+    <string name="hero_list_search_hint">Search by name</string>
+    <string name="hero_list_empty_state">Call the police, no heroes found!</string>
+
+    <!-- Hero List Item -->
+    <string name="hero_list_item_details">Details</string>
+
+    <!-- Hero Details Activity -->
+    <string name="hero_details_comics_title">Comics</string>
+    <string name="hero_details_comics_empty_state">No Comics Found</string>
 
 </resources>
