@@ -45,9 +45,9 @@
             android:textColor="@color/black"
             android:textSize="24sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toTopOf="@+id/heroDetailsText"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/heroDetailsPosterImage"
             tools:text="Hulk" />
 
         <TextView
@@ -59,9 +59,9 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"
-            app:layout_constraintBottom_toBottomOf="@+id/heroDetailsPosterImage"
             app:layout_constraintEnd_toEndOf="@+id/heroDetailsTitle"
             app:layout_constraintStart_toStartOf="@+id/heroDetailsTitle"
+            app:layout_constraintTop_toBottomOf="@+id/heroDetailsTitle"
             tools:text="Some big description here | SOME BG description HERE lorem ipsiu BG description HERE lorem ipsiu Some big description here | SOME BG description HERE lorem ipsiu" />
 
         <TextView
@@ -74,7 +74,7 @@
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="@+id/heroDetailsTitle"
-            app:layout_constraintTop_toBottomOf="@+id/heroDetailsPosterImage" />
+            app:layout_constraintTop_toBottomOf="@+id/heroDetailsText" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/heroComicsList"

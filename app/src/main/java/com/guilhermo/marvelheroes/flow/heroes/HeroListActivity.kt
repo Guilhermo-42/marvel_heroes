@@ -2,15 +2,15 @@ package com.guilhermo.marvelheroes.flow.heroes
 
 import android.content.Context
 import android.os.Bundle
+import android.view.KeyEvent
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.widget.addTextChangedListener
 import androidx.lifecycle.Observer
-import com.guilhermo.marvelheroes.flow.heroes.details.HeroDetailsActivity
-import com.guilhermo.marvelheroes.flow.heroes.details.HeroDetailsActivity.Companion.HERO_ID
 import com.guilhermo.marvelheroes.R
 import com.guilhermo.marvelheroes.extensions.goToActivityWithData
+import com.guilhermo.marvelheroes.flow.heroes.details.HeroDetailsActivity
+import com.guilhermo.marvelheroes.flow.heroes.details.HeroDetailsActivity.Companion.HERO_ID
 import kotlinx.android.synthetic.main.activity_heroes_list.*
 import kotlinx.android.synthetic.main.hero_list_main_state_toolbar.*
 import kotlinx.android.synthetic.main.hero_list_search_state_toolbar.*
@@ -48,9 +48,14 @@ class HeroListActivity : AppCompatActivity(), HeroListAdapter.OnHeroClickListene
                 heroListSearchTextInputLayout.windowToken, 0
             )
             heroListSearchTextInputEditText.setText("")
+            viewModel.retrieveHeroes()
         }
-        heroListSearchTextInputEditText.addTextChangedListener {
-//            viewModel.onSearchTextChanged(it.toString())
+        heroListSearchTextInputEditText.setOnKeyListener { _, keyCode, event ->
+            if (event.action == KeyEvent.ACTION_DOWN && keyCode == KeyEvent.KEYCODE_ENTER) {
+                viewModel.onSearchClicked(heroListSearchTextInputEditText.text.toString())
+                return@setOnKeyListener true
+            }
+            return@setOnKeyListener false
         }
     }
 

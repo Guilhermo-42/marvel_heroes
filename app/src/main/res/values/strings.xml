@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">MovieX</string>
+    <string name="app_name">Marvel Heroes</string>
 
     <!-- Hero List Activity -->
     <string name="hero_list_title">Heroes</string>

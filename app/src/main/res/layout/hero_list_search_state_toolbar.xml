@@ -36,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:hint="@string/hero_list_search_hint"
+            android:imeOptions="actionSearch"
             android:inputType="text" />
 
     </com.google.android.material.textfield.TextInputLayout>
